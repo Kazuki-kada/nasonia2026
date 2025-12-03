@@ -514,7 +514,11 @@
                         </div>
                         <div class="form-group">
                             <label for="file-upload">Upload Abstract File (PDF or Word) *</label>
-                            <input type="file" id="file-upload" class="form-control" required name="file">
+                            <input type="file" id="file-upload" class="form-control" required name="file"
+                                accept=".pdf, .doc, .docx"
+                                title="Select PDF or Word document">
+                            <div id="file-selected-name" style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem; font-style: italic;">
+    No file chosen
                         </div>
                     </div>
                     
@@ -597,5 +601,16 @@
             });
         });
     </script>
+    // 显示已选择的文件名
+document.getElementById('file-upload').addEventListener('change', function(e) {
+    const fileNameDisplay = document.getElementById('file-selected-name');
+    if (this.files.length > 0) {
+        fileNameDisplay.textContent = 'Selected: ' + this.files[0].name;
+        fileNameDisplay.style.color = 'var(--secondary)';
+    } else {
+        fileNameDisplay.textContent = 'No file chosen';
+        fileNameDisplay.style.color = 'var(--gray)';
+    }
+});
 </body>
 </html>
