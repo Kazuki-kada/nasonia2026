@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasonia 2026 | Registration & Submission</title>
+    <title>Nasonia 2026 | International Academic Conference</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -202,10 +202,10 @@
         }
         
         .btn {
-            display: block;
+            display: inline-block;
             background: var(--accent);
             color: white;
-            padding: 0.8rem 1.5rem;
+            padding: 0.8rem 1.8rem;
             text-decoration: none;
             border-radius: 4px;
             font-weight: 600;
@@ -213,7 +213,6 @@
             transition: background 0.3s;
             border: none;
             cursor: pointer;
-            width: 100%;
         }
         
         .btn:hover {
@@ -226,6 +225,14 @@
         
         .btn-secondary:hover {
             background: #2980b9;
+        }
+        
+        .btn-google {
+            background: #4285f4;
+        }
+        
+        .btn-google:hover {
+            background: #3367d6;
         }
         
         /* Abstract and Transportation Cards */
@@ -381,7 +388,7 @@
                 <div class="conference-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Institute of Zoology，Chinese Academy of Sciences, Beijing</span>
+                        <span>Staircase Conference Hall, Beijing</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-globe"></i>
@@ -443,7 +450,9 @@
                             <i class="fas fa-file-alt"></i>
                         </div>
                         <p>Submit your abstract or poster presentation for the conference. Deadline: February 28, 2026.</p>
-                        <button class="btn btn-secondary" onclick="scrollToSection('abstract')">Submit Abstract</button>
+                        <div style="text-align: center;">
+                            <a href="#abstract" class="btn btn-secondary">Submit Abstract</a>
+                        </div>
                     </div>
                 </div>
                 
@@ -456,7 +465,9 @@
                             <i class="fas fa-car"></i>
                         </div>
                         <p>Arrange airport pickup and confirm your travel itinerary. Contact our transportation coordinator.</p>
-                        <button class="btn btn-secondary" onclick="scrollToSection('transportation')">Arrange Pickup</button>
+                        <div style="text-align: center;">
+                            <a href="#transportation" class="btn btn-secondary">Arrange Pickup</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -470,70 +481,45 @@
             </div>
             
             <div class="form-container">
-                <form id="abs-form" action="https://getform.io/f/aqoqnkya"method="POST" enctype="multipart/form-data>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="presenter-name">Presenter Name *</label>
-                            <input type="text" id="presenter-name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="presenter-email">Email Address *</label>
-                            <input type="email" id="presenter-email" class="form-control" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="presenter-affiliation">Affiliation *</label>
-                            <input type="text" id="presenter-affiliation" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="presentation-type">Presentation Type *</label>
-                            <select id="presentation-type" class="form-control" required>
-                                <option value="">Select type</option>
-                                <option value="oral">Oral Presentation (15 min + 5 min Q&A)</option>
-                                <option value="poster">Poster Presentation</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="abstract-title">Abstract Title *</label>
-                        <input type="text" id="abstract-title" class="form-control" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="abstract-authors">Authors (include affiliations) *</label>
-                        <textarea id="abstract-authors" class="form-control" required></textarea>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="keywords">Keywords (comma separated)</label>
-                            <input type="text" id="keywords" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="file-upload">Upload Abstract File (PDF or Word) *</label>
-                            <input type="file" id="file-upload" class="form-control" required name="file"
-                                accept=".pdf, .doc, .docx"
-                                title="Select PDF or Word document">
-                            <div id="file-selected-name" style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem; font-style: italic;">
-    No file chosen
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="btn">Submit Abstract</button>
-                </form>
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <i class="fab fa-google" style="font-size: 3rem; color: #4285f4; margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Submit Abstract via Google Forms</h3>
+                    <p>Please use our official Google Form to submit your abstract. You will be able to upload your PDF or Word file directly through the form.</p>
+                </div>
+                
+                <div style="text-align: center; margin: 2.5rem 0;">
+                    <a href="https://forms.gle/J6gQKUi75hem8aaw9" 
+                       target="_blank" 
+                       class="btn btn-google"
+                       style="padding: 1rem 2.5rem; font-size: 1.1rem;">
+                        <i class="fab fa-google" style="margin-right: 0.5rem;"></i> Go to Submission Form
+                    </a>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 6px; margin-top: 2rem;">
+                    <h4 style="color: var(--primary); margin-bottom: 0.8rem;">What you'll need to submit:</h4>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Presenter information (name, email, affiliation)</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Abstract title and authors list</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Presentation type (oral or poster)</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Your abstract file (PDF or Word format)</li>
+                    </ul>
+                </div>
+                
+                <p style="text-align: center; margin-top: 2rem; color: var(--gray); font-size: 0.9rem;">
+                    <i class="fas fa-external-link-alt" style="margin-right: 0.3rem;"></i>
+                    The form will open in a new tab. After submission, you will receive a confirmation.
+                </p>
             </div>
             
             <!-- Transportation Section -->
-            <h2 class="section-title" id="transportation">Pickup & Hotels</h2>
+            <h2 class="section-title" id="transportation">Transportation & Airport Pickup</h2>
             
             <div class="contact-box">
                 <h4>Transportation Coordinator</h4>
-                <p><strong>Mr. Wang Guanhong</strong></p>
-                <p><i class="fas fa-envelope"></i> Email: nasonia2026@163.com</p>
-                <p><i class="fas fa-phone"></i> Phone: +86-15210988284</p>
+                <p><strong>Mr. Zhang Wei</strong></p>
+                <p><i class="fas fa-envelope"></i> Email: transportation@nasonia2026.org</p>
+                <p><i class="fas fa-phone"></i> Phone: +86-10-8765-4321</p>
                 <p>Please contact at least 7 days before your arrival to arrange pickup service.</p>
             </div>
             
@@ -550,8 +536,8 @@
                 </div>
                 <div class="footer-links">
                     <a href="#" onclick="scrollToTop()">Registration</a>
-                    <a href="#" onclick="scrollToSection('abstract')">Abstract Submission</a>
-                    <a href="#" onclick="scrollToSection('transportation')">Transportation</a>
+                    <a href="#abstract">Abstract Submission</a>
+                    <a href="#transportation">Transportation</a>
                 </div>
             </div>
             <div class="copyright">
@@ -574,43 +560,31 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
         
-        // Form submission handler
-        document.getElementById('abs-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const fileInput = document.getElementById('file-upload');
-            if (fileInput.files.length === 0) {
-                alert('Please upload your abstract file.');
-                return;
-            }
-            alert('Your abstract has been submitted successfully. You will receive a confirmation email and notification of acceptance by March 31, 2026.');
-            this.reset();
-        });
-        
         // Make footer links work
         document.querySelectorAll('.footer-links a').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const text = this.textContent.toLowerCase().trim();
-                if (text === 'registration') {
+                const href = this.getAttribute('href');
+                if (href === '#') {
                     scrollToTop();
-                } else if (text === 'abstract submission') {
+                } else if (href === '#abstract') {
                     scrollToSection('abstract');
-                } else if (text === 'transportation') {
+                } else if (href === '#transportation') {
                     scrollToSection('transportation');
                 }
             });
         });
+        
+        // Make card buttons work
+        document.querySelectorAll('.card .btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    scrollToSection(href.substring(1));
+                }
+            });
+        });
     </script>
-    // 显示已选择的文件名
-document.getElementById('file-upload').addEventListener('change', function(e) {
-    const fileNameDisplay = document.getElementById('file-selected-name');
-    if (this.files.length > 0) {
-        fileNameDisplay.textContent = 'Selected: ' + this.files[0].name;
-        fileNameDisplay.style.color = 'var(--secondary)';
-    } else {
-        fileNameDisplay.textContent = 'No file chosen';
-        fileNameDisplay.style.color = 'var(--gray)';
-    }
-});
 </body>
 </html>
