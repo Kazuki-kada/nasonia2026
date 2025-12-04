@@ -292,7 +292,7 @@
             background: #e8f4fc;
             border-radius: 8px;
             padding: 1.5rem;
-            margin: 1.5rem 0 3rem;
+            margin: 1.5rem 0 2rem;
             border-left: 4px solid var(--secondary);
         }
         
@@ -379,7 +379,7 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
+ <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
@@ -388,7 +388,7 @@
                 <div class="conference-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Institute of Zoology，Chinese Academy of Sciences, Beijing</span>
+                        <span>Institute of Zoology, Chinese Academy of Sciences, Beijing</span>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-globe"></i>
@@ -520,8 +520,62 @@
                 <p><strong>Mr. Wang</strong></p>
                 <p><i class="fas fa-envelope"></i> Email: nasonia2026@163.com</p>
                 <p><i class="fas fa-phone"></i> Phone: +86-15210988284</p>
-                <p>Please contact at least 7 days before your arrival to arrange pickup service.</p>
                 <p><i class="fas fa-hotel"></i> Recommended Hotel: Beijing Ya'ao International Hotel</p>
+                <p>Please contact at least 7 days before your arrival to arrange pickup service.</p>
+            </div>
+            
+            <!-- Travel Information Collection Section -->
+            <h2 class="section-title" id="travel-info">Travel Information Collection</h2>
+            
+            <div class="form-container">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <i class="fas fa-plane" style="font-size: 3rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Provide Your Travel Details</h3>
+                    <p>To help us arrange airport pickup and accommodation, please provide your travel information by sending an email to our transportation coordinator with the following details:</p>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 6px; margin: 2rem 0;">
+                    <h4 style="color: var(--primary); margin-bottom: 1rem;">Required Information:</h4>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-user" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                            <strong>Full Name:</strong> (as it appears on your passport)
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-plane" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                            <strong>Flight Number:</strong> (e.g., CA981)
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-calendar-alt" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                            <strong>Arrival Date & Time:</strong> (Beijing time)
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-map-marker-alt" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                            <strong>Arrival Airport:</strong> (PEK - Beijing Capital or PKX - Beijing Daxing)
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-users" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                            <strong>Number of People:</strong> (including accompanying persons)
+                        </li>
+                        <li style="margin-bottom: 0.8rem; padding-left: 1.5rem; position: relative;">
+                            <i class="fas fa-hotel" style="position: absolute; left: 0; color: var(--secondary);"></i>
+                            <strong>Hotel Reservation:</strong> (Yes/No, and hotel name if booked elsewhere)
+                        </li>
+                    </ul>
+                </div>
+                
+                <div style="text-align: center; margin: 2.5rem 0;">
+                    <div style="display: inline-block; text-align: left; background: #e8f4fc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--secondary);">
+                        <p style="margin-bottom: 0.5rem;"><strong>Send your travel details to:</strong></p>
+                        <p style="margin-bottom: 0.5rem;"><i class="fas fa-envelope"></i> <strong>Email:</strong> transportation@nasonia2026.org</p>
+                        <p style="margin-bottom: 0.5rem;"><i class="fas fa-user"></i> <strong>Subject:</strong> Travel Information - [Your Full Name]</p>
+                        <p style="font-size: 0.9rem; color: var(--gray);">Please send this information at least 7 days before your arrival.</p>
+                    </div>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 1.2rem; border-radius: 6px; border-left: 4px solid #ffc107; margin-top: 2rem;">
+                    <p><strong>Note:</strong> Providing accurate travel information will help us ensure a smooth pickup service. Our coordinator will confirm your pickup details within 48 hours of receiving your information.</p>
+                </div>
             </div>
             
         </div>
@@ -539,6 +593,7 @@
                     <a href="#" onclick="scrollToTop()">Registration</a>
                     <a href="#abstract">Abstract Submission</a>
                     <a href="#transportation">Transportation</a>
+                    <a href="#travel-info">Travel Info</a>
                 </div>
             </div>
             <div class="copyright">
@@ -572,6 +627,8 @@
                     scrollToSection('abstract');
                 } else if (href === '#transportation') {
                     scrollToSection('transportation');
+                } else if (href === '#travel-info') {
+                    scrollToSection('travel-info');
                 }
             });
         });
