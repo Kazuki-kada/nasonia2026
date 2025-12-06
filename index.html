@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nasonia 2026 | International Academic Conference</title>
+    <title>13th Nasonia Meeting, Beijing, China (2026) | International Academic Conference</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -301,6 +301,71 @@
             margin-bottom: 1rem;
         }
         
+        /* FAQ Section */
+        .faq-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid #eaeaea;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid #eaeaea;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+        
+        .faq-item:hover {
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .faq-question {
+            background: #f8f9fa;
+            padding: 1.2rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary);
+            border-bottom: 1px solid transparent;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #e8f4fc;
+        }
+        
+        .faq-question.active {
+            background: var(--primary);
+            color: white;
+            border-bottom: 1px solid var(--primary);
+        }
+        
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s;
+        }
+        
+        .faq-answer.open {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -375,16 +440,25 @@
                 padding: 0.8rem 0.5rem;
                 font-size: 0.9rem;
             }
+            
+            .faq-question {
+                padding: 1rem;
+                font-size: 0.95rem;
+            }
+            
+            .faq-answer.open {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
- <!-- Header -->
+    <!-- Header -->
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Nasonia 2026 International Conference</h1>
-                <p class="subtitle">Beijing, China | May 24-27, 2026</p>
+                <h1>13th Nasonia Meeting, Beijing, China (2026)</h1>
+                <p class="subtitle">May 24-27, 2026</p>
                 <div class="conference-info">
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -573,6 +647,97 @@
                 </div>
             </div>
             
+            <!-- FAQ Section -->
+            <h2 class="section-title" id="faq">Frequently Asked Questions</h2>
+            
+            <div class="faq-container">
+                <div style="text-align: center; margin-bottom: 2rem;">
+                    <i class="fas fa-question-circle" style="font-size: 3rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--primary); margin-bottom: 1rem;">Common Questions & Answers</h3>
+                    <p>Find answers to the most frequently asked questions about the conference.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Which airport should I fly into?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Beijing Capital International Airport, Beijing Daxing International Airport</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How should I use public transportation to travel from the airport to the meeting location?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Organizing committee planned to pick up service, will update more detail soon.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will my international credit card or debit card work in China? If not, how should I pay for items while traveling?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Credit card works in China. I recommend to have some RMB cash as well.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Will my international cell phone work in China (probably not, answer is likely to get a sim service for your existing cell phone plan)</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>International cell phone may not work in China.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What is the best way to pay for the meeting registration fee?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Bank transfer/credit card/Cash should be fine.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are some nearby lodging alternatives if I do not want to stay in a university dormitory room?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We are working on to confirm the hotel soon and it is not university dormitory room.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How should I obtain a VISA needed to attend the meeting in China?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Depend on your own country embassy.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Are there suggestions for places in the Beijing area to visit before or after the meeting?</span>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>There are too many places to visit. Like great wall, forbidden city, the summer palace, peking university...</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </main>
 
@@ -581,24 +746,27 @@
         <div class="container">
             <div class="footer-content">
                 <div>
-                    <p>Nasonia 2026 International Conference</p>
-                    <p>Beijing, China | May 24-27, 2026</p>
+                    <p>13th Nasonia Meeting, Beijing, China (2026)</p>
+                    <p>May 24-27, 2026</p>
                 </div>
                 <div class="footer-links">
                     <a href="#" onclick="scrollToTop()">Registration</a>
                     <a href="#abstract">Abstract Submission</a>
                     <a href="#transportation">Transportation</a>
                     <a href="#travel-info">Travel Info</a>
+                    <a href="#faq">FAQ</a>
                 </div>
             </div>
+            
             <div style="text-align: center; margin: 1.5rem 0; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1);">
-    <p style="color: rgba(255,255,255,0.9);">
-        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
-        For any questions, please email: <strong>nasonia2026@163.com</strong>
-    </p>
-</div>
+                <p style="color: rgba(255,255,255,0.9);">
+                    <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                    For any questions, please email: <strong>nasonia2026@163.com</strong>
+                </p>
+            </div>
+            
             <div class="copyright">
-                <p>© 2025 Nasonia 2026 International Conference Committee. All rights reserved.</p>
+                <p>© 2025 13th Nasonia Meeting, Beijing, China (2026) Conference Committee. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -630,6 +798,8 @@
                     scrollToSection('transportation');
                 } else if (href === '#travel-info') {
                     scrollToSection('travel-info');
+                } else if (href === '#faq') {
+                    scrollToSection('faq');
                 }
             });
         });
@@ -644,6 +814,33 @@
                 }
             });
         });
+        
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const isOpen = answer.classList.contains('open');
+                
+                // Close all other FAQ answers
+                document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+                    openAnswer.classList.remove('open');
+                });
+                
+                // Remove active class from all questions
+                document.querySelectorAll('.faq-question.active').forEach(activeQuestion => {
+                    activeQuestion.classList.remove('active');
+                });
+                
+                // If the clicked answer was not open, open it
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Open first FAQ by default
+        document.querySelector('.faq-question').click();
     </script>
 </body>
 </html>
