@@ -301,6 +301,28 @@
             margin-bottom: 1rem;
         }
         
+        .hotel-info {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .hotel-info h5 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .hotel-price {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+        
         /* FAQ Section */
         .faq-container {
             background: white;
@@ -449,6 +471,10 @@
             .faq-answer.open {
                 padding: 1rem;
             }
+            
+            .hotel-price {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -594,7 +620,25 @@
                 <p><strong>Ms. Zhang</strong></p>
                 <p><i class="fas fa-envelope"></i> Email: nasonia2026@163.com</p>
                 <p><i class="fas fa-phone"></i> Phone: +86-15226815557</p>
-                <p><i class="fas fa-hotel"></i> Recommended Hotel: Beijing Ya'ao International Hotel or Dequan Luxury Hotel (National Convention Center Olympic Park Subway Station Store)</p>
+                
+                <div class="hotel-info">
+                    <h5>Hotel Information</h5>
+                    <p><i class="fas fa-utensils"></i> <strong>Welcome Dinner:</strong> Will be held at Beijing Ya'ao International Hotel</p>
+                    <p><i class="fas fa-hotel"></i> <strong>Recommended Hotels:</strong></p>
+                    
+                    <div class="hotel-price">
+                        <span><strong>Beijing Ya'ao International Hotel</strong></span>
+                        <span>¥550-650 per night</span>
+                    </div>
+                    
+                    <div class="hotel-price">
+                        <span><strong>Shengli Hotel</strong></span>
+                        <span>¥500-600 per night</span>
+                    </div>
+                    
+                    <p style="margin-top: 1rem; font-size: 0.9rem;"><i class="fas fa-info-circle"></i> Please indicate your hotel preference and room type in the travel information form below.</p>
+                </div>
+                
                 <p>Please contact at least 7 days before your arrival to arrange pickup service.</p>
             </div>
             
@@ -625,6 +669,9 @@
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Arrival Date & Time (Beijing time)</li>
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Arrival Airport (PEK - Beijing Capital or PKX - Beijing Daxing)</li>
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Number of People (including accompanying persons)</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Need accommodation arranged? (Yes/No)</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Hotel preference (Beijing Ya'ao International Hotel or Shengli Hotel)</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Room type preference (Single/Double/Twin)</li>
                     </ul>
                 </div>
                 
