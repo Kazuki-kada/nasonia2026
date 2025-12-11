@@ -315,12 +315,16 @@
         }
         
         .hotel-price {
-            display: flex;
-            justify-content: space-between;
-            margin: 0.5rem 0;
-            padding: 0.5rem;
+            margin: 0.8rem 0;
+            padding: 0.8rem;
             background: #f8f9fa;
             border-radius: 4px;
+        }
+        
+        .hotel-details {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
         }
         
         /* FAQ Section */
@@ -627,13 +631,29 @@
                     <p><i class="fas fa-hotel"></i> <strong>Recommended Hotels:</strong></p>
                     
                     <div class="hotel-price">
-                        <span><strong>Beijing Ya'ao International Hotel</strong></span>
-                        <span>¥550-650 per night</span>
+                        <div>
+                            <strong>Beijing Ya'ao International Hotel</strong>
+                            <div class="hotel-details">
+                                <i class="fas fa-map-marker-alt" style="margin-right: 0.3rem;"></i>
+                                No. 1 Jia, Datun Road, Beishatan, Chaoyang District, Beijing, China
+                            </div>
+                        </div>
+                        <div style="margin-top: 0.5rem;">
+                            <strong>Price:</strong> ¥550-650 per night
+                        </div>
                     </div>
                     
                     <div class="hotel-price">
-                        <span><strong>Shengli Hotel</strong></span>
-                        <span>¥500-600 per night</span>
+                        <div>
+                            <strong>Shengli Hotel</strong>
+                            <div class="hotel-details">
+                                <i class="fas fa-map-marker-alt" style="margin-right: 0.3rem;"></i>
+                                No. 3 Beishatan, Deshengmenwai, Chaoyang District, Beijing, China
+                            </div>
+                        </div>
+                        <div style="margin-top: 0.5rem;">
+                            <strong>Price:</strong> ¥500-600 per night
+                        </div>
                     </div>
                     
                     <p style="margin-top: 1rem; font-size: 0.9rem;"><i class="fas fa-info-circle"></i> Please indicate your hotel preference and room type in the travel information form below.</p>
@@ -672,6 +692,8 @@
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Need accommodation arranged? (Yes/No)</li>
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Hotel preference (Beijing Ya'ao International Hotel or Shengli Hotel)</li>
                         <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Room type preference (Single/Double/Twin)</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Check-in Date & Time</li>
+                        <li style="margin-bottom: 0.5rem;"><i class="fas fa-check-circle" style="color: #34a853; margin-right: 0.5rem;"></i> Check-out Date & Time</li>
                     </ul>
                 </div>
                 
