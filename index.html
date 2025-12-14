@@ -71,7 +71,7 @@
         }
         
         .header-image {
-            max-width: 180px;
+            max-width: 270px; /* 放大1.5倍，从180px调整到270px */
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -485,7 +485,7 @@
             }
             
             .header-left img, .header-right img {
-                max-width: 120px;
+                max-width: 180px; /* 放大1.5倍，从120px调整到180px */
             }
             
             .form-row {
@@ -529,6 +529,20 @@
             .faq-answer.open {
                 padding: 1rem;
             }
+        }
+        
+        /* Payment notice */
+        .payment-notice {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1.2rem;
+            margin: 1rem 0 2rem;
+            border-radius: 4px;
+            color: #155724;
+        }
+        
+        .payment-notice strong {
+            color: #0c5460;
         }
     </style>
 </head>
@@ -604,6 +618,10 @@
                     </tr>
                 </tbody>
             </table>
+
+            <div class="payment-notice">
+                <strong>Payment Information:</strong> Registration fees will be collected upon arrival at the conference venue. Please complete your registration through the form below to reserve your spot.
+            </div>
 
             <p class="table-note">* Student registration requires valid student ID verification.</p>
             
@@ -777,6 +795,7 @@
                     <i class="fab fa-google" style="font-size: 3rem; color: #4285f4; margin-bottom: 1rem;"></i>
                     <h3 style="color: var(--primary); margin-bottom: 1rem;">Submit Travel Information via Google Forms</h3>
                     <p>Please use our official Google Form to submit your travel information. This will help us arrange airport pickup and accommodation.</p>
+                    <p style="margin-top: 1rem; color: var(--primary);"><strong>Important:</strong> After you submit your travel information, our organizing committee will arrange airport pickup and hotel room booking for you. We will notify you once the hotel reservation is confirmed.</p>
                 </div>
                 
                 <div style="text-align: center; margin: 2.5rem 0;">
@@ -826,7 +845,10 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Beijing Capital International Airport, Beijing Daxing International Airport</p>
+                        <p>Beijing has two international airports: Beijing Capital International Airport (PEK) and Beijing Daxing International Airport (PKX).</p>
+                        <p><strong>Beijing Capital Airport</strong> is closer to the conference venue and hotels (about 30-40 minutes by car).</p>
+                        <p><strong>Beijing Daxing Airport</strong> is newer with more modern facilities and architectural design, but farther from the city center (about 60-70 minutes by car).</p>
+                        <p>You can choose based on your flight availability and preference.</p>
                     </div>
                 </div>
                 
@@ -846,7 +868,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Credit card works in China. I recommend to have some RMB cash as well.</p>
+                        <p>Credit card works in China, especially in hotels, restaurants, and larger stores. I recommend to have some RMB cash as well for smaller establishments or taxis. Both airports provide currency exchange services for foreign travelers.</p>
                     </div>
                 </div>
                 
@@ -856,7 +878,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>International cell phone may not work in China.</p>
+                        <p>International cell phone may not work in China due to different network standards. Some telecommunications companies provide international roaming packages or eSIM services for China. You can find these services online or check with your home carrier before traveling.</p>
                     </div>
                 </div>
                 
@@ -866,7 +888,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Bank transfer/credit card/Cash should be fine.</p>
+                        <p>Registration fees will be collected upon arrival at the conference venue. You can pay by bank transfer, credit card, or cash (RMB).</p>
                     </div>
                 </div>
                 
@@ -876,7 +898,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>We are working on to confirm the hotel soon and it is not university dormitory room.</p>
+                        <p>We have arranged two recommended hotels near the conference venue: Beijing Ya'ao International Hotel and Shengli Hotel. Both are within walking distance (20-25 minutes) from the conference venue. Please see the hotel information above for details.</p>
                     </div>
                 </div>
                 
@@ -886,7 +908,7 @@
                         <i class="fas fa-chevron-down faq-icon"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Depend on your own country embassy.</p>
+                        <p>Depend on your own country embassy. Please check with the Chinese embassy or consulate in your country for visa requirements and application procedures.</p>
                     </div>
                 </div>
                 
