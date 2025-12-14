@@ -42,23 +42,21 @@
             border-bottom: 4px solid var(--secondary);
         }
         
-        .header-content {
-            text-align: center;
-            position: relative;
+        .header-flex {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: space-between;
             gap: 2rem;
         }
         
-        .header-image {
-            max-height: 120px;
-            max-width: 200px;
-            object-fit: contain;
+        .header-left, .header-right {
+            flex: 0 0 auto;
+            text-align: center;
         }
         
-        .header-text {
+        .header-center {
             flex: 1;
+            text-align: center;
         }
         
         h1 {
@@ -70,6 +68,19 @@
             font-size: 1.2rem;
             margin-bottom: 1rem;
             font-weight: 300;
+        }
+        
+        .header-image {
+            max-width: 180px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .header-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.3);
         }
         
         .conference-info {
@@ -449,13 +460,18 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .header-content {
+            .header-flex {
                 flex-direction: column;
                 gap: 1rem;
             }
             
-            .header-image {
-                max-height: 80px;
+            .header-left, .header-right {
+                order: -1;
+                margin-bottom: 1rem;
+            }
+            
+            .header-left img, .header-right img {
+                max-width: 120px;
             }
             
             .form-row {
@@ -499,10 +515,6 @@
             .faq-answer.open {
                 padding: 1rem;
             }
-            
-            .hotel-price {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -510,12 +522,14 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="header-content">
-                <!-- 左侧图片 -->
+            <div class="header-flex">
+                <div class="header-left">
+                    <img src="https://i.postimg.cc/G4WGF2RY/Nasoniavit.jpg" 
+                         alt="Nasonia parasitoid wasp" 
+                         class="header-image">
+                </div>
                 
-                
-                <!-- 中间标题文本 -->
-                <div class="header-text">
+                <div class="header-center">
                     <h1>13th Nasonia Meeting, Beijing, China (2026)</h1>
                     <p class="subtitle">May 24-27, 2026</p>
                     <div class="conference-info">
@@ -530,8 +544,11 @@
                     </div>
                 </div>
                 
-                <!-- 右侧图片 -->
-                
+                <div class="header-right">
+                    <img src="https://i.postimg.cc/bG1b3hYx/dong-wu-suo.jpg" 
+                         alt="Institute of Zoology, Chinese Academy of Sciences" 
+                         class="header-image">
+                </div>
             </div>
         </div>
     </header>
